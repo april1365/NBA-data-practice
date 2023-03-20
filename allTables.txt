@@ -1,0 +1,29 @@
+game:
+  season_id team_id_home team_abbreviation_home   team_name_home     game_id  ... tov_away pf_away pts_away  plus_minus_away  video_available_away
+0     21946   1610610035                    HUS  Toronto Huskies  0024600001  ...      NaN     NaN       68                2                     0
+
+[1 rows x 54 columns]
+game_summary:
+         game_date_est  game_sequence     game_id  game_status_id  ... live_pc_time natl_tv_broadcaster_abbreviation live_period_time_bcast wh_status
+0  1946-11-01 00:00:00            NaN  0024600001               3  ...         None                             None                 Q5  -          1
+
+[1 rows x 14 columns]
+other_stats:
+  league_id team_id_home team_abbreviation_home team_city_home  ...  team_turnovers_away  total_turnovers_away  team_rebounds_away  pts_off_to_away
+0        00   1610612745                    HOU        Houston  ...                    0                  27.0                11.0              NaN
+
+[1 rows x 25 columns]
+officials:
+      game_id official_id first_name  last_name jersey_num
+0  0029600059        1140      Bruce  Alexander          9
+inactive_players:
+      game_id player_id first_name last_name jersey_num     team_id  team_city  team_name team_abbreviation
+0  0029600034       184      Bobby    Phills         14  1610612739  Cleveland  Cavaliers               CLE
+game_info:
+      game_id            game_date  attendance game_time
+0  0024600001  1946-11-01 00:00:00         NaN          
+line_score:
+         game_date_est  game_sequence     game_id team_id_home  ... pts_ot8_away pts_ot9_away pts_ot10_away pts_away
+0  1946-11-01 00:00:00            NaN  0024600001   1610610035  ...          NaN          NaN           NaN       68
+
+[1 rows x 43 columns]

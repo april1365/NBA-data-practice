@@ -50,8 +50,28 @@ plt.ylabel('Frequency')
 plt.title('Histogram of Total Points')
 plt.show()
 
-# Seaborn heatmap (for correlation matrix)
-corr_matrix = df.corr()
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
-plt.title('Correlation Matrix')
+
+
+# Compute the correlation matrix for numeric columns
+corr_matrix = df.corr(numeric_only=True)
+
+# Set the plot style and font size
+sns.set(style="white", font_scale=1.2)
+
+# Create a custom colormap for the heatmap
+cmap = sns.diverging_palette(220, 10, as_cmap=True)
+
+# Set the figure size
+plt.figure(figsize=(14, 10))
+
+# Draw the heatmap with the mask and correct aspect ratio
+sns.heatmap(corr_matrix, cmap=cmap, annot=True, fmt=".2f", linewidths=.5, cbar_kws={"shrink": .5}, annot_kws={"size": 10})
+
+# Set the title
+plt.title('Correlation Matrix', fontsize=18)
+
+# Rotate x-axis labels
+plt.xticks(rotation=45, ha='right')
+
+# Show the plot
 plt.show()
